@@ -5,48 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mainpage.css">
 </head>
-<body>
-    <div>
-        <h1>WELCOME TO MY WEBSITE</h1>
+<body onload="myFunction()">
+    
+    <!-- Load is called here -->
+    <div id="loader"></div>
+
+    <div id="maincontent" class="animate-bottom" style="display: none;">
+            <!-- landing page elements -->
+        <div>
+            <h1>WELCOME TO MY WEBSITE</h1>
+        </div>
+
+        <!-- sumarry page elements -->
+        <div>
+            <h1>ABOUT ME</h1>
+            <p>My name is Jean-Luc, I'm a third year IT student</p>
+        </div>
+
+        <!-- coding experience page elements -->
+        <div>
+            <h1>Coding experience</h1>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Web development</li>
+        </div>
+
+        <!-- interest page elements -->
+        <div>
+            <h1>Interests</h1>
+            <li>gaming</li>
+            <li>history</li>
+            <li>Science and technology</li>
+        </div>
+
+        <!-- Interesting video page elements -->
+        <div>
+            <h1>Interesting videos</h1>
+            <h2>The unkillable Michael Malloy</h2>
+            <iframe src="https://www.youtube.com/embed/kuYylDsN6KQ"></iframe>
+            <h2>A fun little hsitory lesson</h2>
+            <iframe src="https://www.youtube.com/embed/-Wx6npt421c"></iframe>
+        </div>
+
+        <!-- contact details page elements -->
+        <div>
+            <h1>Contact details</h1>
+            <p>jeanluc@gmail.com</p>
+
+            <h1>Download for CV</h1>
+            <a href="CV.docx">
+                <button type="submit">DOWNLOAD CV</button>
+            </a>
+        </div>
     </div>
 
-    <div>
-        <h1>ABOUT ME</h1>
-        <p>My name is Jean-Luc, I'm a third year IT student</p>
-    </div>
+<script>
+    // scripting for loader
+    var myVar;
 
-    <div>
-        <h1>Coding experience</h1>
-        <li>C#</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>Web development</li>
-    </div>
+    function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+    }
 
-    <div>
-        <h1>Interests</h1>
-        <li>gaming</li>
-        <li>history</li>
-        <li>Science and technology</li>
-    </div>
-
-    <div>
-        <h1>Interesting videos</h1>
-        <h2>The unkillable Michael Malloy</h2>
-        <iframe src="https://www.youtube.com/embed/kuYylDsN6KQ"></iframe>
-        <h2>A fun little hsitory lesson</h2>
-        <iframe src="https://www.youtube.com/embed/-Wx6npt421c"></iframe>
-    </div>
-
-    <div>
-        <h1>Contact details</h1>
-        <p>jeanluc@gmail.com</p>
-
-        <h1>Download for CV</h1>
-        <a href="CV.docx">
-            <button type="submit">DOWNLOAD CV</button>
-        </a>
-    </div>
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("maincontent").style.display = "block";
+    }
+</script>
 </body>
 </html>
