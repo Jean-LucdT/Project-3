@@ -1,6 +1,7 @@
-// scripting for loader
+// variable for the loader
 var myVar;
 
+//scripting for the loader
 function myFunction() {
     myVar = setTimeout(showPage, 3000);
 }

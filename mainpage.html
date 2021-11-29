@@ -17,55 +17,75 @@
             <!-- landing page elements -->
         <div class="firstpage">
             <h1>WELCOME TO MY WEBSITE</h1>
-
-            <button onclick="summaryFunction()" class="firstpagebutton">About me</button>
-            <button onclick="experienceFunction()" class="firstpagebutton">Coding experience</button>
-            <button onclick="interestsFunction()" class="firstpagebutton">Interests</button>
-            <button onclick="videoFunction()" class="firstpagebutton">Interesting videos</button>
-            <button onclick="contactFunction()" class="firstpagebutton">Contact details</button>
+            
+            <a href="#modal1"><button class="firstpagebutton">About me</button></a>
+            <a href="#modal2"><button class="firstpagebutton">Coding experience</button></a>
+            <a href="#modal3"><button class="firstpagebutton">Interests</button></a>
+            <a href="#modal4"><button class="firstpagebutton">Interesting videos</button></a>
+            <a href="#modal5"><button class="firstpagebutton">Contact details</button></a>
         </div>
 
         <!-- sumarry page elements -->
-        <div id="summary" style="display: none;">
-            <h1>ABOUT ME</h1>
-            <p>My name is Jean-Luc, I'm a third year IT student</p>
+        <div class="popup" id="modal1">
+            <a href="#" class="popup_overlay"></a>
+            <div class="popup_content">
+                <a href="#" class="popup_close">Close</a>
+                <h1>ABOUT ME</h1>
+                <p>My name is Jean-Luc, I'm a third year IT student</p>
+            </div>
         </div>
 
         <!-- coding experience page elements -->
-        <div id="experience" style="display: none;">
-            <h1>Coding experience</h1>
-            <li>C#</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Web development</li>
+        <div class="popup" id="modal2">
+            <a href="#" class="popup_overlay"></a>
+            <div class="popup_content">
+                <a href="#" class="popup_close">Close</a>
+                <h1>Coding experience</h1>
+                <li>C#</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Web development</li>
+            </div>
         </div>
 
         <!-- interest page elements -->
-        <div id="interests" style="display: none;">
-            <h1>Interests</h1>
-            <li>gaming</li>
-            <li>history</li>
-            <li>Science and technology</li>
+        <div class="popup" id="modal3">
+            <a href="#" class="popup_overlay"></a>
+            <div class="popup_content">
+                <a href="#" class="popup_close">Close</a>
+                <h1>Interests</h1>
+                <li>gaming</li>
+                <li>history</li>
+                <li>Science and technology</li>
+            </div>
         </div>
 
         <!-- Interesting video page elements -->
-        <div id="video" style="display: none;">
-            <h1>Interesting videos</h1>
-            <h2>The unkillable Michael Malloy</h2>
-            <iframe src="https://www.youtube.com/embed/kuYylDsN6KQ"></iframe>
-            <h2>A fun little hsitory lesson</h2>
-            <iframe src="https://www.youtube.com/embed/-Wx6npt421c"></iframe>
+        <div class="popup" id="modal4">
+            <a href="#" class="popup_overlay"></a>
+            <div class="popup_content">
+                <a href="#" class="popup_close">Close</a>
+                <h1>Interesting videos</h1>
+                <h2>The unkillable Michael Malloy</h2>
+                <iframe src="https://www.youtube.com/embed/kuYylDsN6KQ"></iframe>
+                <h2>A fun little hsitory lesson</h2>
+                <iframe src="https://www.youtube.com/embed/-Wx6npt421c"></iframe>
+            </div>
         </div>
 
         <!-- contact details page elements -->
-        <div id="contact" style="display: none;">
-            <h1>Contact details</h1>
-            <p>jeanluc@gmail.com</p>
+        <div class="popup" id="modal5">
+            <a href="#" class="popup_overlay"></a>
+            <div class="popup_content">
+                <a href="#" class="popup_close">Close</a>
+                <h1>Contact details</h1>
+                <p>jeanluc@gmail.com</p>
 
-            <h1>Download for CV</h1>
-            <a href="CV.docx">
-                <button type="submit">DOWNLOAD CV</button>
-            </a>
+                <h1>Download for CV</h1>
+                <a href="CV.docx">
+                    <button type="submit">DOWNLOAD CV</button>
+                </a>
+            </div>            
         </div>
     </div>
 </body>
