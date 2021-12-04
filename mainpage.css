@@ -131,8 +131,9 @@ input[type=checkbox] {
 .popup_content {
     position: fixed;
     z-index: 9;
-    width: 80%;
+    width: 40%;
     max-width: 1200px;
+    height: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -141,9 +142,111 @@ input[type=checkbox] {
     background: #fff;
 }
 
+/* styling for popup's title */
+.popup_header {
+    /* padding: 2px 16px; */
+    /* min-height: 20%; */
+    height: 20%;
+    background-color: #0A7FFE;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: popup_header 2s linear;
+}
+
+/* styling for the popup's body */
+.popup_body {
+    background-color: white;
+    overflow-y: scroll;
+    height: 70%;
+    animation: popup_body 2s linear;
+}
+ 
+/* styling for the popup's footer */
+.popup_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 16px;
+    height: 10%;
+    background-color: #0A7FFE;
+    color: white;
+    border-radius:  0px 0px 20px 20px;
+    animation: popup_footer 2s linear;
+}
+
 /* The Close Button */
 .popup_close {
-    position: absolute;
-    top: 16px;
-    right: 26px;
+    border-radius: 20px;
+    width: 30%;
+    height: 60%;
+    min-height: 60px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+
+/* animations and styling for the various elements withint the popup's body */
+.popup_body p {
+    font-size: 1.2rem;
+    color: blueviolet;
+    animation: popup_body 3s linear;
+}
+
+.popup_body h3 {
+    font-size: 1.5rem;
+    color: 	#0A7FFE;
+}
+
+/* styling for the titles */
+h2 {
+    font-size: 3rem;
+    color: 	white;
+}
+
+
+/* animation for the body */
+@keyframes popup_body {
+    0%   { 
+        transform: translateX(200%); 		
+    }
+    100% { 
+        transform: translateX(0%); 
+    }
+}
+
+/* animation for the header */
+@keyframes popup_header {
+    0%   { 
+        transform: translateX(-200%); 		
+    }
+    100% { 
+        transform: translateX(0%); 
+    }
+}
+
+/* aniamtion for the footer */
+@keyframes popup_footer{
+    0%   { 
+        transform: translateX(-200%); 		
+    }
+    100% { 
+        transform: translateX(0%); 
+    }
+}
+
+/* responsive changes */
+@media only screen and (max-width: 600px){
+    /* increase the size of the popup */
+    .popup_content {
+        width: 80%;
+    }
+
+    /* increases the size of the firstpage */
+    .firstpage {
+        margin: 0;
+    }
 }
