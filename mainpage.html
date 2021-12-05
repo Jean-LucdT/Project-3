@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="mainpage.js"></script>
 </head>
 <body onload="myFunction()">
-    
     <!-- Load is called here -->
     <div id="loader"></div>
-
     <div id="maincontent" class="animate-bottom" style="display: none;">
             <!-- landing page elements -->
         <div class="firstpage">
             <h1>WELCOME TO MY WEBSITE</h1>
-            
+
             <a href="#modal1"><button class="firstpagebutton">About me</button></a>
             <a href="#modal2"><button class="firstpagebutton">Coding experience</button></a>
             <a href="#modal3"><button class="firstpagebutton">Interests</button></a>
@@ -33,7 +32,11 @@
                     <h2>ABOUT ME</h2>
                 </div>
                 <div class="popup_body">
-                    <p>My name is Jean-Luc, I'm a third year IT student</p>
+                    <p>
+                        My name is Jean-Luc, I am a third year IT student. I am busy doing my bachelor's degree in IT at the North West
+                        University's Potchefstroom campus. I have zero experience in an actual IT field, but that will not stop me.
+                        Or so I hope. 
+                    </p>
                 </div>
                 <div class="popup_footer">
                     <a href="#"><button class="popup_close">Close</button></a>
@@ -75,9 +78,26 @@
                     <h2>Interests</h2>
                 </div>
                 <div class="popup_body">
-                    <li>gaming</li>
-                    <li>history</li>
-                    <li>Science and technology</li>
+                    <h3>History</h3>
+                    <p>
+                        I am a big fan of history. I am especially a interested in history revolving around the various human conflicts
+                        and how they shaped the world we live in today.
+                    </p>
+
+                    <h3>Artificial intelligence</h3>
+                    <p>
+                        I have always been interested in the future, the what-if, and there is no bigger upcomign star in the IT field than AI.
+                        The rate at which AI is advancing is outstanding from AI that can play hide-and-seek, to AI that can beat the DOTA 2 pros
+                        at their own game, to AI that can clone anybody's voice in seconds (see video below).
+                    </p>
+                    <iframe src="https://www.youtube.com/embed/0sR1rU3gLzQ"></iframe>
+
+                    <h3>Gaming</h3>
+                    <p>
+                        Gaming is, by far, my favourite hobby. It is a beautiful form of entertain that can allow you to experience so many 
+                        stories completely unrestricted by the rules of our world. My favourite genres include strategy, like Total War, and
+                        single player games, like Dishonored/Witcher/Metro. 
+                    </p>
                 </div>
                 <div class="popup_footer">
                     <a href="#"><button class="popup_close">Close</button></a>
@@ -94,9 +114,14 @@
                 </div>
                 <div class="popup_body">
                     <h3>The unkillable Michael Malloy</h3>
+                    <p>The story about a nearly unkillable homeless 60 year old. I highly recommend giving this a watch.</p>
                     <iframe src="https://www.youtube.com/embed/kuYylDsN6KQ"></iframe>
                     
-                    <h3>A fun little hsitory lesson</h3>
+                    <h3>A fun little history lesson</h3>
+                    <p>
+                        The story about the early Cold War nuclear attack simulations that were held my America. The purpose of which
+                        was to prove how impenetrable the American airspace was, but it fact it proved the exact opposite.
+                    </p>
                     <iframe src="https://www.youtube.com/embed/-Wx6npt421c"></iframe>
                 </div>
                 <div class="popup_footer">
@@ -113,15 +138,17 @@
                     <h2>Contact details</h2>
                 </div>
                 <div class="popup_body">
+                    <h3>Email:</h3>
                     <p>jeanluc@gmail.com</p>
-
-                    <h3>Download for CV</h3>
+                    <h3>Phone number:</h3>
+                    <p>500-500</p>
+                    
                     <a href="CV.docx">
-                        <button type="submit">DOWNLOAD CV</button>
+                        <button type="submit" class="downloadbutton"><i class="fa fa-download"></i> DOWNLOAD CV</button>
                     </a>
                 </div>
                 <div class="popup_footer">
-                    <a href="#"><button class="popup_close">Close</button></a>
+                    <a href="#"><button class="popup_close">&laquo; Close</button></a>
                 </div>
             </div>            
         </div>

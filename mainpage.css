@@ -2,7 +2,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: url('bluebackground.jpg');
+    background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -64,7 +64,7 @@ body {
     margin: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1.5rem;
     text-align: center;
 }
@@ -75,15 +75,17 @@ body {
     min-height: 80px;
     font-size: 2.5rem;
     border-radius: 20px;
+    border: 1px solid black;
     margin-top: 1%;
+    background-color: #f7f9fc;
 }
 
 .firstpagebutton:hover {
     box-shadow: -0.3rem 0.3rem 0.3rem black;
     transform: translate(1rem, -0.5rem);
-    background-color: blue;
-    border-color: white;
-    color: white;
+    background-color: #8c8d8f;
+    border-color: #f7f9fc;
+    color: #f7f9fc;
 }
 
 a {
@@ -139,16 +141,16 @@ input[type=checkbox] {
     transform: translate(-50%, -50%);
     border-radius: 8px;
     padding: 58px 32px 32px 32px;
-    background: #fff;
+    /* background: #fff; */
 }
 
 /* styling for popup's title */
 .popup_header {
     /* padding: 2px 16px; */
     /* min-height: 20%; */
-    height: 20%;
-    background-color: #0A7FFE;
-    color: white;
+    height: 15%;
+    background-color: #8c8d8f;
+    color: #f7f9fc;
     border-radius: 20px 20px 0px 0px;
     display: flex;
     justify-content: center;
@@ -158,41 +160,50 @@ input[type=checkbox] {
 
 /* styling for the popup's body */
 .popup_body {
-    background-color: white;
+    background-color: #f7f9fc;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 70%;
     animation: popup_body 2s linear;
+    padding: 1rem;
+    text-align: center;
 }
  
 /* styling for the popup's footer */
 .popup_footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 16px;
-    height: 10%;
-    background-color: #0A7FFE;
-    color: white;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-top: 8px;
+    padding-bottom: 0%;
+    min-height: 12%;
+    background-color: #8c8d8f;
+    color: #f7f9fc;
     border-radius:  0px 0px 20px 20px;
     animation: popup_footer 2s linear;
 }
 
-/* The Close Button */
+/*  styling for the close button */
 .popup_close {
     border-radius: 20px;
     width: 30%;
     height: 60%;
     min-height: 60px;
     background-color: red;
-    color: white;
+    color: #f7f9fc;
     font-size: 1.5rem;
     border: 1px solid black;
+    margin-left: 35%;
+}
+
+.popup_close:hover {
+    box-shadow: 0px 5px 15px #d6090f;
 }
 
 /* animations and styling for the various elements withint the popup's body */
 .popup_body p {
-    font-size: 1.2rem;
-    color: blueviolet;
+    font-size: 1.4rem;
+    color: #252526;
     animation: popup_body 3s linear;
 }
 
@@ -207,6 +218,49 @@ h2 {
     color: 	white;
 }
 
+h1 {
+    font-size: 4rem;
+    color: #f7f9fc;
+}
+
+/* styling for the downlaod button */
+.downloadbutton {
+    background-color: dodgerblue;
+    color: #f7f9fc;
+    font-size: 2.5rem;
+    border: 1px solid dodgerblue;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    float: inline-end;
+    border-radius: 20px;
+}
+
+.downloadbutton:hover {
+    background-color: royalblue;
+    box-shadow: 0px 5px 15px dodgerblue;
+}
+
+/* scrollbar styling */
+/* scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+/* scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+/* scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 
 /* animation for the body */
 @keyframes popup_body {
@@ -221,20 +275,20 @@ h2 {
 /* animation for the header */
 @keyframes popup_header {
     0%   { 
-        transform: translateX(-200%); 		
+        transform: translateY(-200%); 		
     }
     100% { 
-        transform: translateX(0%); 
+        transform: translateY(0%); 
     }
 }
 
 /* aniamtion for the footer */
 @keyframes popup_footer{
     0%   { 
-        transform: translateX(-200%); 		
+        transform: translateY(200%); 		
     }
     100% { 
-        transform: translateX(0%); 
+        transform: translateY(0%); 
     }
 }
 
@@ -243,6 +297,21 @@ h2 {
     /* increase the size of the popup */
     .popup_content {
         width: 80%;
+        height: 100%;
+    }
+
+    /* decrease the size of the popup body */
+    .popup_body {
+        max-height: 60%;
+    }
+
+    .popup_header {
+        text-align: center;
+    }
+
+    /* decrease the size of the titles */
+    h2 {
+        font-size: 2rem;
     }
 
     /* increases the size of the firstpage */
